@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.List;
 
-import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductInfoRepositoryTest {
@@ -21,22 +21,22 @@ public class ProductInfoRepositoryTest {
     @Test
     public void save(){
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("123456");
-        productInfo.setProductName("皮蛋粥");
-        productInfo.setProductPrice(new BigDecimal(80.8));
-        productInfo.setProductDescription("很好喝");
-        productInfo.setProductStatus(1);
-        productInfo.setCategoryType(2);
+        productInfo.setProductId("1658764");
+        productInfo.setProductName("蜂蜜柚子茶");
+        productInfo.setProductPrice(new BigDecimal(10.8));
+        productInfo.setProductDescription("好喝");
+        productInfo.setProductStatus(0);
+        productInfo.setCategoryType(3);
         productInfo.setProductIcon("htp://xxxx");
-        productInfo.setProductStock(100);
+        productInfo.setProductStock(200);
 
         ProductInfo save = productInfoRepository.save(productInfo);
         Assert.assertNotNull(save);
     }
     
-    
     @Test
     public void findByProductStatus() {
-//        productInfoRepository.findByProductStatus();
+        List<ProductInfo> result = productInfoRepository.findByProductStatus(0);
+        Assert.assertNotEquals(0,result.size());
     }
 }
