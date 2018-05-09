@@ -96,4 +96,11 @@ public class OrderServiceImplTest {
         Assert.assertEquals(OrderStatusEnum.FINISHED.getCode(),result.getOrderStatus());
         
     }
+    
+    @Test
+    public void list(){
+        PageRequest pageRequest = new PageRequest(0, 3);
+        Page<OrderDTO> orderDTOPage = orderService.findList(pageRequest);
+        Assert.assertEquals(3,orderDTOPage.getTotalPages());
+    }
 }
