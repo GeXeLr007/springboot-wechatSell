@@ -20,6 +20,10 @@ public class ProductCategory {
     private String categoryName;
     
     private Integer categoryType;
+    
+    private Date createTime;
+    
+    private Date updateTime;
 
     public ProductCategory() {
     }
