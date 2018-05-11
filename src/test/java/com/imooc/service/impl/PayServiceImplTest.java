@@ -1,7 +1,10 @@
 package com.imooc.service.impl;
 
 import com.imooc.dto.OrderDTO;
+import com.imooc.service.OrderService;
 import com.imooc.service.PayService;
+import com.lly835.bestpay.model.PayResponse;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +19,13 @@ public class PayServiceImplTest {
 
     @Autowired
     private PayService payService;
+    @Autowired
+    private OrderService orderService;
     
     @Test
     public void create() {
-        OrderDTO orderDTO = new OrderDTO();
-        payService.create(orderDTO);
+        OrderDTO orderDTO = orderService.findOne("1526012643727372838");
+        PayResponse payResponse = payService.create(orderDTO);
 
     }
 

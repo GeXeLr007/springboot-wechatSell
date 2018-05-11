@@ -16,8 +16,18 @@ wechat:
   mpAppId: wxc80aa306ca075013
   mpAppSecret: 2eb4bf23f5389da83a48870495496983
   mchId: 1394130302
-  mchKey: fhgljsjfn
-  keyPath: h5.p12
+  mchKey: c976503d34ca432c601361f969fd8d66   
+  keyPath: apiclient_cert.p12
+  notifyUrl: http://gxl.mynatapp.cc/sell/pay/notify
+  
+  
+  openAppId: 
+  openSecret: 
+  
+projectUrl:
+  wechatMpAuthorize: http://gxl.mynatapp.cc
+  wechatOpenAuthorize: http://gxl.mynatapp.cc
+  sell: http://gxl.mynatapp.cc
   
   
     
