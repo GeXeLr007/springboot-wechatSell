@@ -29,12 +29,5 @@ public class PayServiceImplTest {
 
     }
 
-//    @Test
-//    public void notify() {
-//        
-//    }
 
-    @Test
-    public void refund() {
-    }
 }
