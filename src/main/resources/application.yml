@@ -22,8 +22,6 @@ wechat:
   mchKey: c976503d34ca432c601361f969fd8d66   
   keyPath: C:\Users\gxl17\Documents\workspaces\IdeaProjects\sell\src\main\resources\static\h5.p12
   notifyUrl: http://gxl.mynatapp.cc/sell/notify   # 正式上线需要修改为  http://gxl.mynatapp.cc/sell/pay/notify
-  
-  
   openAppId: 
   openSecret: 
   
