@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/")  //正式上线需要修改为/pay
+@RequestMapping("/pay")  //正式上线需要修改为/pay
 public class PayController {
 
     @Autowired
